@@ -1,0 +1,7 @@
+{
+  "name": "ionfavapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
