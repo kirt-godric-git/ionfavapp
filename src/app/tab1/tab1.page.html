@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Favorite Books
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,125 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Books</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Ionic card tags with SCSS -->
+  <ion-item-divider>
+    <ion-label class="labelDivider">List of Favorites #1 (ion-card)</ion-label>
+  </ion-item-divider>
+  <ion-item *ngFor="let book of books; trackBy:trackBooks">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ book.title }}</ion-card-title>
+        <ion-card-subtitle>{{ book.subtitle }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="auto">
+            <ion-img  src="{{ book.logoimg }}" alt="{{ book.title }}"></ion-img>
+          </ion-col>
+          <ion-col size="10">
+            <ion-card-content class="outerbox">
+              <ion-label><b>Author(s): </b>{{ book.author.join(', ') }} </ion-label>
+              <ion-label><b>Genre: </b>{{ book.genre }}</ion-label>
+            </ion-card-content>
+            <ion-card-content [innerText]="book.bookDetails"></ion-card-content>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-item>
+  <br>
+
+  <!-- Bootstrap card tags with SCSS -->
+  <ion-item-divider>
+    <ion-label class="labelDivider">List of Favorites #2 (bootstrap card-body)</ion-label>
+  </ion-item-divider>
+  <div *ngFor="let book of books; trackBy:trackBooks">
+    <div class="card ms-4 me-4"> 
+      <div class="card-body">
+        <h5 class="card-title">{{ book.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary txtGray">{{ book.subtitle }}</h6>
+        <br>
+        <div>
+          <div class="row justify-content-start">
+            <div class="col-md-auto">
+              <img src="{{ book.logoimg }}" class="rounded float-start" alt="...">
+            </div>
+            <div class="col col-10 txtGray">
+              <div class="d-flex justify-content-between">
+                <p><b>Author(s): </b>{{ book.author.join(', ') }}</p>
+                <p><b>Genre: </b>{{ book.genre }}</p>
+              </div>
+              <p class="card-text" [innerText]="book.bookDetails"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <hr>
+  </div>
+
+  <br>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
+
+
+<!-- <ion-card>
+  <ion-card-header>
+    <ion-card-title>Rich Dad Poor Dad</ion-card-title>
+    <ion-card-subtitle>What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!</ion-card-subtitle>
+  </ion-card-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="auto">
+        <ion-img  src="https://m.media-amazon.com/images/I/81BE7eeKzAL._SL1500_.jpg" alt="Rich Dad Poor Dad"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <ion-card-content><b>Genre: </b>Personal Finance Advice</ion-card-content>
+        <ion-card-content><b>Details of the book: </b>
+          Explodes the myth that you need to earn a high income to be rich, challenges the belief that your house is an asset, shows parents why they 
+          can't rely on the school system to teach their kids about money and tells you what to teach your children about money.            
+        </ion-card-content>
+        <ion-card-content>
+          An overnight, word-of-mouth bestselling personal finance book phenomenon for millions of readers hoping to become masters of their money and 
+          create sustaining wealth for themselves and their families.
+        </ion-card-content>
+        <ion-card-content>
+          Personal-finance author and lecturer Robert T. Kiyosaki developed his unique economic perspective from two very different influences—his two 
+          fathers. One father (Robert's real father) was a highly educated man but fiscally poor. The other father was the father of Robert's best 
+          friend—that Dad was an eighth-grade dropout who became a self-made multimillionaire.
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+
+<div class="card ms-2 me-2" >
+  <div class="card-body">
+    <h5 class="card-title">The 7 Habits of Highly Effective People</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary txtGray">Powerful Lessons in Personal Change</h6>
+    <br>
+    <div>
+      <div class="row justify-content-start">
+        <div class="col-md-auto">
+          <img src="https://m.media-amazon.com/images/I/61wADuboi4L._AC_UF1000,1000_QL80_.jpg" class="rounded float-start" alt="...">
+        </div>
+        <div class="col col-10 txtGray">
+          <p><b>Genre: </b>Personal Development</p>
+          <p class="card-text"><b>Details of the book: </b>Covey defines effectiveness as the balance of obtaining desirable results with caring for 
+            that which produces those results. He illustrates this by referring to the fable of the goose that laid the golden eggs. He claims that 
+            effectiveness can be expressed in terms of the P/PC ratio, where P refers to getting desired results and PC is caring for that which 
+            produces the results.</p>
+          <p>Covey argues against what he calls the personality ethic, that he sees as prevalent in many modern self-help books. He promotes what he 
+            labels the character ethic: aligning one's values with what he claims to be universal and timeless principles. In doing this, Covey 
+            distinguishes principles and values. He sees principles as external natural laws, while values remain internal and subjective. He says 
+            that values govern people's behavior, while principles ultimately determine the consequences. Covey presents his teachings in a series 
+            of seven habits, organized as a progression from dependence through independence on to interdependence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,56 @@
+ion-img  {
+    width:100% !important;
+    height : 100% !important;
+    max-width: 150px !important;  //any size
+    max-height: 250px !important; //any size
+}
+
+ion-img::part(image) {
+    border-radius: 10px;
+}
+
+ion-card-subtitle {
+    font-weight: bold;
+    font-style: italic;
+}
+
+ion-item-divider {
+    background: rgb(45, 161, 244);
+    color: #fff;
+  
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-start: 20px;
+    padding-end: 20px;
+}
+
+.labelDivider {
+    font-size: 17px;
+}
+  
+.outerbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+// For image used in bootstrap framework using card-body version.
+img  {
+    width:100% !important;
+    height : 100% !important;
+    max-width: 150px !important;  //any size
+    max-height: 250px !important; //any size
+}
+
+// For text characters used in bootstrap framework using card-body version.
+.txtGray {
+    font-size: 15px;
+    color: gray;
+}
+
+hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
