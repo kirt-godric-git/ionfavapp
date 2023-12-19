@@ -8,14 +8,16 @@ export let booksArray: Ibook[] = [
         bookDetails: `Explodes the myth that you need to earn a high income to be rich, challenges the belief that your house is an asset, shows parents why they can't rely on the school system to teach their kids about money and tells you what to teach your children about money.`
         +` An overnight, word-of-mouth bestselling personal finance book phenomenon for millions of readers hoping to become masters of their money and create sustaining wealth for themselves and their families.`
         +`\n\nPersonal-finance author and lecturer Robert T. Kiyosaki developed his unique economic perspective from two very different influences—his two fathers. One father (Robert's real father) was a highly educated man but fiscally poor. The other father was the father of Robert's best friend—that Dad was an eighth-grade dropout who became a self-made multimillionaire.`,
-        logoimg: "../assets/richdadpoordad.jpg"
+        logoimg: "../assets/rich-dad-logo-purple.svg",
+        bookimg: "../assets/richdadpoordad.jpg"
     },
     { id: 2, title: "The 7 Habits of Highly Effective People", subtitle: "Powerful Lessons in Personal Change", 
         author: ["Stephen R. Covey"],
         genre: "Personal Development", 
         bookDetails: "Covey defines effectiveness as the balance of obtaining desirable results with caring for that which produces those results. He illustrates this by referring to the fable of the goose that laid the golden eggs. He claims that effectiveness can be expressed in terms of the P/PC ratio, where P refers to getting desired results and PC is caring for that which produces the results."
         +"\n\nCovey argues against what he calls the personality ethic, that he sees as prevalent in many modern self-help books. He promotes what he labels the character ethic: aligning one's values with what he claims to be universal and timeless principles. In doing this, Covey distinguishes principles and values. He sees principles as external natural laws, while values remain internal and subjective. He says that values govern people's behavior, while principles ultimately determine the consequences. Covey presents his teachings in a series of seven habits, organized as a progression from dependence through independence on to interdependence.",
-        logoimg: "../assets/the7habitsofhighlyeffectivepeople.jpg"
+        logoimg: "../assets/franklin-covey-logo-new.png",
+        bookimg: "../assets/the7habitsofhighlyeffectivepeople.jpg"
     },
 ];
 
